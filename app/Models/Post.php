@@ -15,4 +15,8 @@ class Post extends Model
         'category_id',
         // 'is_published'
     ];
+
+    public function category(){
+        return $this->belongsTo(Category::class); //milik sebuah category
+    }
 }
