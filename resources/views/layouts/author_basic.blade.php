@@ -373,13 +373,13 @@
 			<div class="footer-nav">
 				<div class="container">
 					<div class="col-md-6 col-sm-5">
-						<p>&copy; 2018 jodyalmaida.com</p>
+						<p>&copy; 2018 sharehubid.com</p>
 						<p>Design and Template by Author Basic Template</p>
 					</div>
 					<div class="col-md-6 col-sm-7">
 						<ul>
 							<li><a href="{{URL('/')}}">Home</a></li>
-							<li><a href="https://jodyalmaida.com}">About Me</a></li>
+							<li><a href="https://jodyalmaida.com}" target="_blank">About Me</a></li>
 						</ul>
 					</div>
 				</div>
