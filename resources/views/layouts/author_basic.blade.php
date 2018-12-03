@@ -17,6 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('author-basic/css/font-awesome.css')}}"/>
 	<link rel="stylesheet" type="text/css" href="{{ asset('author-basic/css/offcanvas.css')}}"/>
 	<link rel="stylesheet" type="text/css" href="{{ asset('author-basic/css/style3.css')}}"/>
+	<style type="text/css">
+	@media only screen and (max-width: 600px) {
+    	.carousel-caption{
+    		display: none !important;
+    	}
+	}
+	</style>
 	@yield('css')
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,7 +40,7 @@
 			<div class="header-top">
 				<div class="container">
 					<div class="col-md-9 col-sm-7 xs-view">
-						<a href=""></a>
+						
 					</div>
 					<div class="col-md-3 col-sm-5 xs-view-right">
 						<div class="search-section center-block pull-right">
@@ -42,16 +49,6 @@
 								<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-search"></i></button>
 							</form>
 						</div>
-						<!-- Author -->
-						<!-- <div class="author-form">
-							<li class="dropdown">
-								<form>
-									<a href="" class="dropdown-toggle author-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-										<i class="fa fa-user author-icon"></i>
-									</a>
-								</form>
-							</li>
-						</div> --><!-- /Author -->
 					</div>
 				</div>
 			</div><!-- header-top -->
@@ -98,74 +95,75 @@
 		</header>
 		<!--========================== Contant-Area================================-->
 		<div class="contant-area">
-			<!-- <div class="container"> -->
-			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="col-md-12 col-sm-8 col-xs-12">
-					<div id="myCarousel" class="owl-carousel owl-theme" data-ride="carousel">
-						<div class="item">
-							<img src="{{asset('author-basic/images/code.jpg')}}"  style="width:100%;">
-							<div class="carousel-caption">
-								<h3>Develop Website Menggunakan Framework Laravel</h3>
+			<div class="container">
+				<div class="row row-offcanvas row-offcanvas-left">
+					<div class="col-md-12 col-sm-8 col-xs-12">
+						<div id="myCarousel" class="owl-carousel owl-theme" data-ride="carousel">
+							<div class="item">
+								<img src="{{asset('author-basic/images/code.jpg')}}"  style="width:100%;">
+								<div class="carousel-caption">
+									<h3>Develop Website Menggunakan Framework Laravel</h3>
+								</div>
 							</div>
-						</div>
 
-						<div class="item">
-							<img src="{{asset('author-basic/images/desk.jpg')}}" style="width:100%;">
-							<div class="carousel-caption">
-								<h3>Develop Android App Menggunakan Android Studio</h3>
+							<div class="item">
+								<img src="{{asset('author-basic/images/desk.jpg')}}" style="width:100%;">
+								<div class="carousel-caption">
+									<h3>Develop Android App Menggunakan Android Studio</h3>
+								</div>
 							</div>
-						</div>
 
-						<div class="item">
-							<img src="{{asset('author-basic/images/serem.jpg')}}"  style="width:100%;">
-							<div class="carousel-caption">
-								<h3>Hidup Tidak Selamanya Coding, Hilangkan Kejenuhan Disini</h3>
+							<div class="item">
+								<img src="{{asset('author-basic/images/serem.jpg')}}"  style="width:100%;">
+								<div class="carousel-caption">
+									<h3>Hidup Tidak Selamanya Coding, Hilangkan Kejenuhan Disini</h3>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="col-md-3 col-sm-4 col-xs-6 sidebar-offcanvas" id="sidebar">
-					<!--========================== left-sidebar ================================-->
-					<div class="left-sidebar">
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingOne">
-									<h4 class="panel-title">
-										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Categories
-											<i class="fa fa-angle-right"></i>
-											<i class="fa fa-angle-down"></i>
-										</a>
-									</h4>
-								</div>
-								<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									<div class="panel-body">
-										<ul>
-											<li><a href="">Laravel</a></li>
-											<li><a href="">Android Studio</a></li>
-											<li><a href="">Others</a></li>
-										</ul>
+				<br>
+				<div class="row row-offcanvas row-offcanvas-left">
+					<div class="col-md-3 col-sm-4 col-xs-6 sidebar-offcanvas" id="sidebar">
+						<!--========================== left-sidebar ================================-->
+						<div class="left-sidebar">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Categories
+												<i class="fa fa-angle-right"></i>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+											<ul>
+												<li><a href="">Laravel</a></li>
+												<li><a href="">Android Studio</a></li>
+												<li><a href="">Others</a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div> <!-- left-sidebar-->
-				</div>
-				<!--========================== main-content ================================-->
-				<div class="col-md-6 col-sm-8 col-xs-12">
-					@yield('content')
-				</div>
-				<!--========================== Right-Sidebar ================================-->
-				<div class="col-md-3 col-sm-12 col-xs-12">
-					<div class="right-sidebar">
-						<div class="righ-sidebar-body">
-							<?php $post = App\Models\Post::latest()->take(3)->get(); ?>
-							<?php $laravel = App\Models\Post::where('category_id',1)->latest()->take(2)->get(); ?>
-							<?php $android = App\Models\Post::where('category_id',2)->latest()->take(2)->get(); ?>
-							<?php $others = App\Models\Post::where('category_id',3)->latest()->take(2)->get(); ?>
-							<div class="item">
-								<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
+						</div> <!-- left-sidebar-->
+					</div>
+					<!--========================== main-content ================================-->
+					<div class="col-md-6 col-sm-8 col-xs-12">
+						@yield('content')
+					</div>
+					<!--========================== Right-Sidebar ================================-->
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<div class="right-sidebar">
+							<div class="righ-sidebar-body">
+								<?php $post = App\Models\Post::latest()->take(3)->get(); ?>
+								<?php $laravel = App\Models\Post::where('category_id',1)->latest()->take(2)->get(); ?>
+								<?php $android = App\Models\Post::where('category_id',2)->latest()->take(2)->get(); ?>
+								<?php $others = App\Models\Post::where('category_id',3)->latest()->take(2)->get(); ?>
+								<div class="item">
+									<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
 								<!-- <div class="col-md-12 col-sm-6">
 									<a href="#"><img src="images/right-post-img-1.jpg" alt="slider"></a>
 									<div class="carousel-caption">
@@ -200,112 +198,112 @@
 										<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
 										<div class="post-meta">
 											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-										</div>
-									</div>
-								</div>
-								@endforelse
-							</div>
-							<div class="item">
-								@forelse ($android as $key=>$val)
-								<a href=""><h4 class="post-title slide-title">Android Studio</h4></a>
-								<div class="col-md-12 col-sm-6">
-									<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-										<div class="post-meta">
-											<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											{!!$val->body!!}
+												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
+											</div>
 										</div>
 									</div>
+									@endforelse
 								</div>
-								@empty
-								<div class="col-md-12 col-sm-6">
-									<a href="#"><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-										<div class="post-meta">
+								<div class="item">
+									@forelse ($android as $key=>$val)
+									<a href=""><h4 class="post-title slide-title">Android Studio</h4></a>
+									<div class="col-md-12 col-sm-6">
+										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
+											<div class="post-meta">
+												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												{!!$val->body!!}
+											</div>
+										</div>
+									</div>
+									@empty
+									<div class="col-md-12 col-sm-6">
+										<a href="#"><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
+											<div class="post-meta">
 											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-										</div>
-									</div>
-								</div>
-								@endforelse
-							</div><!--item lg-->
-							<div class="item">
-								<a href=""><h4 class="post-title slide-title">Laravel</h4></a>
-								@forelse ($laravel as $key=>$val)
-								<div class="col-md-12 col-sm-6">
-									<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-										<div class="post-meta">
-											<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											{!!$val->body!!}
+												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								@empty
-								<div class="col-md-12 col-sm-6">
-									<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-										<div class="post-meta">
+									@endforelse
+								</div><!--item lg-->
+								<div class="item">
+									<a href=""><h4 class="post-title slide-title">Laravel</h4></a>
+									@forelse ($laravel as $key=>$val)
+									<div class="col-md-12 col-sm-6">
+										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
+											<div class="post-meta">
+												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												{!!$val->body!!}
+											</div>
+										</div>
+									</div>
+									@empty
+									<div class="col-md-12 col-sm-6">
+										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
+											<div class="post-meta">
 											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-										</div>
-									</div>
-								</div>
-								@endforelse
-							</div><!--item lg-->
-							<div class="item">
-								@forelse ($others as $key=>$val)
-								<a href=""><h4 class="post-title slide-title">Others</h4></a>
-								<div class="col-md-12 col-sm-6">
-									<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-										<div class="post-meta">
-											<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											{!!str_limit($val->body,200)!!}
+												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								@empty
-								<div class="col-md-12 col-sm-6">
+									@endforelse
+								</div><!--item lg-->
+								<div class="item">
+									@forelse ($others as $key=>$val)
 									<a href=""><h4 class="post-title slide-title">Others</h4></a>
-									<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-										<div class="post-meta">
-											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-										</div>
-										<div class="post-content no-border">
-											<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
+									<div class="col-md-12 col-sm-6">
+										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
+											<div class="post-meta">
+												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												{!!str_limit($val->body,200)!!}
+											</div>
 										</div>
 									</div>
-								</div>
-								@endforelse
-							</div><!--item lg-->
+									@empty
+									<div class="col-md-12 col-sm-6">
+										<a href=""><h4 class="post-title slide-title">Others</h4></a>
+										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
+											<div class="post-meta">
+											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
+											</div>
+										</div>
+									</div>
+									@endforelse
+								</div><!--item lg-->
 							<!-- <div class="col-md-12 col-sm-6 post-static">
 								<h5 class="post-title">email newsletter</h5>
 								<div class="post-content no-border">
@@ -318,11 +316,11 @@
 									<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-paper-plane"></i></button>
 								</form>
 							</div> -->
-						</div><!-- Righ-sidebar-body -->
-					</div><!-- Right-Sidebar -->
+							</div><!-- Righ-sidebar-body -->
+						</div><!-- Right-Sidebar -->
+					</div>
 				</div>
-			</div>
-			<!-- </div>Container -->
+			</div><!--Container -->
 		</div><!-- Content-area -->
 		<footer>
 			<div class="footer-menu">
@@ -402,6 +400,7 @@
     <script src="{{ asset('OwlCarousel2/owl.carousel.js')}}"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
+    		// alert('cek');
     		$(".owl-carousel").owlCarousel({
     			loop:true,
     			center:true,
@@ -411,7 +410,7 @@
     			autoHeight:true,
     			responsiveClass:true,
     			autoplay:true,
-    			autoplayTimeout:7000,
+    			autoplayTimeout:5000,
     			autoplayHoverPause:true,
     			responsive:{
     				0:{

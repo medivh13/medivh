@@ -42,9 +42,9 @@
 </div><!-- main-content -->
 <div class="pagination">
 	<nav>
-		<div align="center">
+		<!-- <div align="center" > -->
 			{{$post->appends(['search' => request()->get('search')])->links()}}
-		</div>
+		<!-- </div> -->
 	</nav>
 </div>
 @endsection
