@@ -18,7 +18,7 @@
 			<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 		</div>
 		<div class="post-content">
-			<p>{!!str_limit($val->body,200)!!}</p>
+			<p>{!!str_limit($val->body,500)!!}</p>
 			<a href='{{ url("/post/{$val->slug}") }}'  class="btn btn-sm btn-category">See more</a>
 		</div>
 	</article>

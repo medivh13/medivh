@@ -187,7 +187,7 @@
 											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 										</div>
 										<div class="post-content no-border">
-											{!!$val->body!!}
+											{!!str_limit($val->body,500)!!}
 										</div>
 									</div>
 								</div>
@@ -219,7 +219,7 @@
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
-												{!!$val->body!!}
+												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
 									</div>
@@ -251,7 +251,7 @@
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
-												{!!$val->body!!}
+												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
 									</div>
@@ -283,7 +283,7 @@
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
-												{!!str_limit($val->body,200)!!}
+												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
 									</div>
