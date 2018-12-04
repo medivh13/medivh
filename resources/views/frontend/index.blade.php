@@ -11,7 +11,7 @@
 		<button class="btn btn-default btn-sm btn-category">{{$tag->name}}</button>
 		@empty
 		@endforelse--}}
-		<h2 class="post-title">{{$val->title}}</h2>
+		<a href='{{ url("/post/{$val->slug}") }}'><h2 class="post-title">{{$val->title}}</h2></a>
 		<div class="post-meta">
 			<!-- <span><a href="#"><i class="fa fa-share-alt post-meta-icon"></i> 400 Shares </a></span>
 			<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 20 Comments </a></span> -->
