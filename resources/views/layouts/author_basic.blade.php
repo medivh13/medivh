@@ -183,7 +183,7 @@
 									<div class="carousel-caption">
 										<a href='{{ url("/post/{$val->slug}") }}'"><h5 class="post-title">{{$val->title}}</h5></a>
 										<div class="post-meta">
-											<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+											<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 										</div>
 										<div class="post-content no-border">
@@ -215,7 +215,7 @@
 										<div class="carousel-caption">
 											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
 											<div class="post-meta">
-												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
@@ -247,7 +247,7 @@
 										<div class="carousel-caption">
 											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
 											<div class="post-meta">
-												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
@@ -279,7 +279,7 @@
 										<div class="carousel-caption">
 											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
 											<div class="post-meta">
-												<span><a href=""><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
+												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
