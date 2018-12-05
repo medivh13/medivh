@@ -1,5 +1,13 @@
 @extends('layouts.author_basic')
-
+@section('title')
+{{$post->title}}
+@endsection
+@section('meta_description')
+{{$post->meta_description}}
+@endsection
+@section('meta_keywords')
+{{$post->meta_keywords}}
+@endsection
 @section('content')
 <div class="main-content">
 	@if($post->title)

@@ -1,5 +1,13 @@
 @extends('layouts.author_basic')
-
+@section('title')
+{{'Web & Android App'}}
+@endsection
+@section('meta_description')
+{{'Tutorial Laravel dan Android Studio'}}
+@endsection
+@section('meta_keywords')
+{{'laravel, vue, android studio, bahasa indonesia'}}
+@endsection
 @section('content')
 <div class="main-content">
 	@forelse ($post as $key=>$val)
