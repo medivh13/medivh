@@ -21,8 +21,8 @@ Route::get('/', function (Request $request) {
 		->orWhere('body', 'like', "%$search%")
 		->orWhere('slug', 'like', "%$search%");
 	})->with('category')
+	->published()
                     // ->withCount('comments')
-                    // ->published()
 	->simplePaginate(5); 
 
 

@@ -19,4 +19,9 @@ class Post extends Model
     public function category(){
         return $this->belongsTo(Category::class); //milik sebuah category
     }
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'PUBLISHED');
+    }
 }
