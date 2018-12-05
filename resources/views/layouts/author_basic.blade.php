@@ -159,10 +159,10 @@
 					<div class="col-md-3 col-sm-12 col-xs-12">
 						<div class="right-sidebar">
 							<div class="righ-sidebar-body">
-								<?php $post = App\Models\Post::latest()->take(3)->get(); ?>
-								<?php $laravel = App\Models\Post::where('category_id',1)->latest()->take(2)->get(); ?>
-								<?php $android = App\Models\Post::where('category_id',2)->latest()->take(2)->get(); ?>
-								<?php $others = App\Models\Post::where('category_id',3)->latest()->take(2)->get(); ?>
+								<?php $post = App\Models\Post::latest()->published()->take(3)->get(); ?>
+								<?php $laravel = App\Models\Post::where('category_id',1)->latest()->published()->take(2)->get(); ?>
+								<?php $android = App\Models\Post::where('category_id',2)->latest()->published()->take(2)->get(); ?>
+								<?php $others = App\Models\Post::where('category_id',3)->latest()->published()->take(2)->get(); ?>
 								<div class="item">
 									<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
 								<!-- <div class="col-md-12 col-sm-6">
