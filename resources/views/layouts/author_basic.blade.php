@@ -38,10 +38,10 @@
 	<div class="wrapper">
 		<header>
 			<!--========================== Header-Top ================================-->
-			<div class="header-top">
-				<div class="container">
+			<div class="header-top" style="background-color: white !important;">
+				<div class="container" >
 					<div class="col-md-9 col-sm-7 xs-view">
-						
+						<img class="logo" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />
 					</div>
 					<div class="col-md-3 col-sm-5 xs-view-right">
 						<div class="search-section center-block pull-right">
