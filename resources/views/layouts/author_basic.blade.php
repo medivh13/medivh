@@ -38,10 +38,10 @@
 	<div class="wrapper">
 		<header>
 			<!--========================== Header-Top ================================-->
-			<div class="header-top" style="background-color: white !important;">
+			<div class="header-top"><!--style="background-color: white !important;"-->
 				<div class="container" >
 					<div class="col-md-9 col-sm-7 xs-view">
-						<img class="logo" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />
+						{{--<img class="logo" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />--}}
 					</div>
 					<div class="col-md-3 col-sm-5 xs-view-right">
 						<div class="search-section center-block pull-right">
@@ -84,6 +84,8 @@
 								<li><a href="{{URL('/')}}">Home</a></li>
 								<li><a href="https://jodyalmaida.com" target="_blank">About Me</a></li>
 							</ul>
+							<br>
+							<img class="logo pull-right" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />
 							<!-- <ul class="nav navbar-nav navbar-right hidden-xs">
 								<li><a href="https://github.com/medivh13" target="_blank"><i class="fa fa-github github"></i></a></li>
 								<li><a href="https://www.linkedin.com/in/jody-almaida-putra-667772ab/" target="_blank"><i class="fa fa-linkedin linkedin"></i></a></li>
