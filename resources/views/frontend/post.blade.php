@@ -1,6 +1,6 @@
 @extends('layouts.author_basic')
 @section('title')
-{{$post->title}}
+{{$post->seo_title}}
 @endsection
 @section('meta_description')
 {{$post->meta_description}}
