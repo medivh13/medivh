@@ -185,47 +185,33 @@
 								<?php $others = App\Models\Post::where('category_id',3)->latest()->published()->take(2)->get(); ?>
 								<div class="item">
 									<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
-								<!-- <div class="col-md-12 col-sm-6">
-									<a href="#"><img src="images/right-post-img-1.jpg" alt="slider"></a>
-									<div class="carousel-caption">
-										<a href="#"><h5 class="post-title">migrant crisis</h5></a>
-										<div class="post-meta">
-											<span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-											<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span>
-										</div>
-										<div class="post-content no-border">
-											<p>Migrant survivor says Mediterranean shipwreck was like a war scene'.</p>
-										</div>
-									</div>
-								</div> -->
-								@forelse ($post as $key=>$val)
-								<div class="col-md-12 col-sm-6">
-									<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href='{{ url("/post/{$val->slug}") }}'"><h5 class="post-title">{{$val->title}}</h5></a>
-										<div class="post-meta">
-											<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
+									@forelse ($post as $key=>$val)
+									<div class="col-md-12 col-sm-6">
+										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href='{{ url("/post/{$val->slug}") }}'"><h5 class="post-title">{{$val->title}}</h5></a>
+											<div class="post-meta">
+												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
 											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+											</div>
+											<div class="post-content no-border">
+												{!!str_limit($val->body,500)!!}
+											</div>
 										</div>
-										<div class="post-content no-border">
-											{!!str_limit($val->body,500)!!}
-										</div>
-									</div>
-								</div>
-								@empty
-								<div class="col-md-12 col-sm-6">
-									<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
-									<div class="carousel-caption">
-										<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-										<div class="post-meta">
-											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
+									</div><br>
+									@empty
+									<div class="col-md-12 col-sm-6">
+										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
+										<div class="carousel-caption">
+											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
+											<div class="post-meta">
+											
 											</div>
 											<div class="post-content no-border">
 												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@endforelse
 								</div>
 								<div class="item">
@@ -243,7 +229,7 @@
 												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@empty
 									<div class="col-md-12 col-sm-6">
 										<a href="#"><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
@@ -257,7 +243,7 @@
 												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@endforelse
 								</div><!--item lg-->
 								<div class="item">
@@ -275,7 +261,7 @@
 												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@empty
 									<div class="col-md-12 col-sm-6">
 										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
@@ -289,7 +275,7 @@
 												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@endforelse
 								</div><!--item lg-->
 								<div class="item">
@@ -307,7 +293,7 @@
 												{!!str_limit($val->body,500)!!}
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@empty
 									<div class="col-md-12 col-sm-6">
 										<a href=""><h4 class="post-title slide-title">Others</h4></a>
@@ -322,21 +308,9 @@
 												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
 											</div>
 										</div>
-									</div>
+									</div><br>
 									@endforelse
-								</div><!--item lg-->
-							<!-- <div class="col-md-12 col-sm-6 post-static">
-								<h5 class="post-title">email newsletter</h5>
-								<div class="post-content no-border">
-									<p>Migrant survivor says Mediterranean shipwreck was like a war scene'.</p>
 								</div>
-							</div>
-							<div class="col-md-12 col-sm-6 email-section">
-								<form>
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address">
-									<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-paper-plane"></i></button>
-								</form>
-							</div> -->
 							</div><!-- Righ-sidebar-body -->
 						</div><!-- Right-Sidebar -->
 					</div>
