@@ -151,10 +151,12 @@
 									</div>
 									<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 										<div class="panel-body">
+											<?php $category = App\Models\Category::all(); ?>
 											<ul>
-												<li><a href="">Laravel</a></li>
-												<li><a href="">Android Studio</a></li>
-												<li><a href="">Others</a></li>
+												@foreach($category as $key=>$val)
+												<li><a href="{{URL('/category/'.$val->name)}}">{{$val->name}}</a></li>
+												@endforeach
+
 											</ul>
 										</div>
 									</div>
@@ -386,7 +388,7 @@
 				<div class="container">
 					<div class="col-md-6 col-sm-5">
 						<p>&copy; 2018 sharehubid.com</p>
-						<p>Design and Template by Author Basic Template</p>
+						{{-- <p>Design and Template by Author Basic Template</p> --}}
 					</div>
 					<div class="col-md-6 col-sm-7">
 						<ul>
