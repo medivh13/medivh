@@ -132,12 +132,12 @@
 								</div>
 							</div>
 
-							<div class="item">
+							{{-- <div class="item">
 								<img src="{{asset('author-basic/images/ori.png')}}"  style="width:100%;">
 								<div class="carousel-caption">
 									<h3>Tutorial Web dan Mobile App Dev Bahasa Indonesia</h3>
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
