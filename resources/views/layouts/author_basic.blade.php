@@ -138,13 +138,6 @@
 									<h3>Hidup Tidak Selamanya Coding, Hilangkan Kejenuhan Disini</h3>
 								</div>
 							</div>
-
-							{{-- <div class="item">
-								<img src="{{asset('author-basic/images/ori.png')}}"  style="width:100%;">
-								<div class="carousel-caption">
-									<h3>Tutorial Web dan Mobile App Dev Bahasa Indonesia</h3>
-								</div>
-							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -191,7 +184,7 @@
 									<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
 									@forelse ($post as $key=>$val)
 									<div class="col-md-12 col-sm-6">
-										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
+										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="slider"/></a>
 										<div class="carousel-caption">
 											<a href='{{ url("/post/{$val->slug}") }}'"><h5 class="post-title">{{$val->title}}</h5></a>
 											<div class="post-meta">
@@ -199,7 +192,7 @@
 											<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
-												{!!str_limit($val->body,500)!!}
+												{!!str_limit($val->body,200)!!}
 											</div>
 										</div>
 									</div><br>
