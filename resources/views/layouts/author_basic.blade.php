@@ -128,7 +128,7 @@
 							<div class="item">
 								<img src="{{asset('author-basic/images/desk.jpg')}}" style="width:100%;">
 								<div class="carousel-caption">
-									<h3>Develop Android App Menggunakan Android Studio</h3>
+									<h3>Develop Android App Menggunakan React Native</h3>
 								</div>
 							</div>
 
