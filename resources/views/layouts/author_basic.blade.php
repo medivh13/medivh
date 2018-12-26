@@ -186,10 +186,7 @@
 					<div class="col-md-3 col-sm-12 col-xs-12">
 						<div class="right-sidebar">
 							<div class="righ-sidebar-body">
-								<?php $post = App\Models\Post::latest()->published()->take(3)->get(); ?>
-								<?php $laravel = App\Models\Post::where('category_id',1)->latest()->published()->take(2)->get(); ?>
-								<?php $android = App\Models\Post::where('category_id',2)->latest()->published()->take(2)->get(); ?>
-								<?php $others = App\Models\Post::where('category_id',3)->latest()->published()->take(2)->get(); ?>
+								<?php $post = App\Models\Post::latest()->published()->take(20)->get(); ?>
 								<div class="item">
 									<a href=""><h4 class="post-title slide-title">Latest Post</h4></a>
 									@forelse ($post as $key=>$val)
@@ -213,103 +210,6 @@
 											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
 											<div class="post-meta">
 											
-											</div>
-											<div class="post-content no-border">
-												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-											</div>
-										</div>
-									</div><br>
-									@endforelse
-								</div>
-								<div class="item">
-									@forelse ($android as $key=>$val)
-									<a href=""><h4 class="post-title slide-title">Android Studio</h4></a>
-									<div class="col-md-12 col-sm-6">
-										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-											<div class="post-meta">
-												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
-												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-											</div>
-											<div class="post-content no-border">
-												{!!str_limit($val->body,500)!!}
-											</div>
-										</div>
-									</div><br>
-									@empty
-									<div class="col-md-12 col-sm-6">
-										<a href="#"><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-											<div class="post-meta">
-											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-											</div>
-											<div class="post-content no-border">
-												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-											</div>
-										</div>
-									</div><br>
-									@endforelse
-								</div><!--item lg-->
-								<div class="item">
-									<a href=""><h4 class="post-title slide-title">Laravel</h4></a>
-									@forelse ($laravel as $key=>$val)
-									<div class="col-md-12 col-sm-6">
-										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-											<div class="post-meta">
-												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
-												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-											</div>
-											<div class="post-content no-border">
-												{!!str_limit($val->body,500)!!}
-											</div>
-										</div>
-									</div><br>
-									@empty
-									<div class="col-md-12 col-sm-6">
-										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-											<div class="post-meta">
-											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-											</div>
-											<div class="post-content no-border">
-												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
-											</div>
-										</div>
-									</div><br>
-									@endforelse
-								</div><!--item lg-->
-								<div class="item">
-									@forelse ($others as $key=>$val)
-									<a href=""><h4 class="post-title slide-title">Others</h4></a>
-									<div class="col-md-12 col-sm-6">
-										<a href='{{ url("/post/{$val->slug}") }}'><img src="{{asset('/storage/'.$val->image)}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href='{{ url("/post/{$val->slug}") }}'><h5 class="post-title">{{$val->title}}</h5></a>
-											<div class="post-meta">
-												<span><i class="fa fa-calendar-check-o post-meta-icon"></i> {{$val->created_at->diffForHumans()}}</span>
-												<!-- <span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
-											</div>
-											<div class="post-content no-border">
-												{!!str_limit($val->body,500)!!}
-											</div>
-										</div>
-									</div><br>
-									@empty
-									<div class="col-md-12 col-sm-6">
-										<a href=""><h4 class="post-title slide-title">Others</h4></a>
-										<a href="#"><img src="{{ asset('author-basic/images/sorry.jpg')}}" alt="Post"/></a>
-										<div class="carousel-caption">
-											<a href="#"><h5 class="post-title">Article Tidak Ditemukan</h5></a>
-											<div class="post-meta">
-											<!-- <span><a href="#"><i class="fa fa-calendar-check-o post-meta-icon"></i> april 13, 2015 </a></span>
-												<span><a href="#"><i class="fa fa-comments post-meta-icon"></i> 50 </a></span> -->
 											</div>
 											<div class="post-content no-border">
 												<p>Dengan segala keterbatasan waktu yang ada, saya tetap berusaha untuk sesering mungkin melakukan update. Anda juga dapat melakukan request article melalui kontak  email saya. Terimakasih</p>
