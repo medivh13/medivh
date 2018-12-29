@@ -36,7 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('author-basic/css/style3.css')}}"/>
 	<style type="text/css">
 	@media only screen and (max-width: 600px) {
-    	.carousel-caption{
+    	.asd{
     		display: none !important;
     	}
 	}
@@ -120,21 +120,21 @@
 						<div id="myCarousel" class="owl-carousel owl-theme" data-ride="carousel">
 							<div class="item">
 								<img src="{{asset('author-basic/images/code.jpg')}}"  style="width:100%;">
-								<div class="carousel-caption">
+								<div class="carousel-caption asd">
 									<h3>Develop Website Menggunakan Framework Laravel</h3>
 								</div>
 							</div>
 
 							<div class="item">
 								<img src="{{asset('author-basic/images/desk.jpg')}}" style="width:100%;">
-								<div class="carousel-caption">
+								<div class="carousel-caption asd">
 									<h3>Develop Android App Menggunakan React Native</h3>
 								</div>
 							</div>
 
 							<div class="item">
 								<img src="{{asset('author-basic/images/serem.jpg')}}"  style="width:100%;">
-								<div class="carousel-caption">
+								<div class="carousel-caption asd">
 									<h3>Hidup Tidak Selamanya Coding, Hilangkan Kejenuhan Disini</h3>
 								</div>
 							</div>
