@@ -23,6 +23,7 @@ Route::get('/', function (Request $request) {
 		->orWhere('slug', 'like', "%$search%");
 	})->with('category')
 	->published()
+	->inRandomOrder()
                     // ->withCount('comments')
 	->simplePaginate(5); 
 
