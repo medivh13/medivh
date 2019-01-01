@@ -173,6 +173,26 @@
 										</div>
 									</div>
 								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">List Post
+												<i class="fa fa-angle-right"></i>
+												<i class="fa fa-angle-down"></i>
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body">
+											<?php $post = App\Models\Post::published()->get(); ?>
+											<ul>
+												@foreach($post as $key=>$val)
+												<li><a href="{{url("/post/{$val->slug}")}}">{{ucwords($val->title)}}</a></li>
+												@endforeach
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div> <!-- left-sidebar-->
 					</div>
