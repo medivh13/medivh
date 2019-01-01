@@ -106,7 +106,7 @@
 								<li><a href="https://jodyalmaida.com" target="_blank">About Me</a></li>
 							</ul>
 							<br>
-							<img class="logo pull-right share-hub" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:30% !important; height: 30% !important;" /><br>
+							<img class="logo pull-right share-hub" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" /><br>
 							<!-- <ul class="nav navbar-nav navbar-right hidden-xs">
 								<li><a href="https://github.com/medivh13" target="_blank"><i class="fa fa-github github"></i></a></li>
 								<li><a href="https://www.linkedin.com/in/jody-almaida-putra-667772ab/" target="_blank"><i class="fa fa-linkedin linkedin"></i></a></li>
