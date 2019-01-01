@@ -30,9 +30,17 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('author-basic/css/style3.css')}}"/>
 	<style type="text/css">
 	@media only screen and (max-width: 600px) {
-    	.asd{
+		.lup{
     		display: none !important;
     	}
+    	.carousel-place{
+    		display: none !important;
+    	}
+		/*.share-hub{
+			height: auto !important;
+			width: auto !important;
+		}*/
+
 	}
 	</style>
 	@yield('css')
@@ -51,16 +59,21 @@
 			<div class="header-top"><!--style="background-color: white !important;"-->
 				<div class="container" >
 					<div class="col-md-9 col-sm-7 xs-view">
-						{{--<img class="logo" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />--}}
+						<a href="{{URL('/')}}"><img class="logo" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:104px !important; height: 22px !important;" /></a>
 					</div>
 					<div class="col-md-3 col-sm-5 xs-view-right">
 						<div class="search-section center-block pull-right">
 							<form method="get" action="{{url('/')}}">
-								<input type="text" class="form-control" id="exampleInputName2" name="search" placeholder="Search">
-								<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-search"></i></button>
+								<input type="text" class="form-control" id="exampleInputName2" name="search" placeholder="Search" />
+								<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-search lup"></i></button>
 							</form>
 						</div>
+						<!-- Author -->
+						<div class="author-form">
+							
+						</div><!-- /Author -->
 					</div>
+					
 				</div>
 			</div><!-- header-top -->
 			
@@ -74,11 +87,9 @@
 								<i class="fa fa-long-arrow-left"></i>
 							</button>
 						</p>
-						<div class="social-nav center-block visible-xs">
-							<!-- <li><a href="https://github.com/medivh13" target="_blank"><i class="fa fa-github github"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/jody-almaida-putra-667772ab/" target="_blank"><i class="fa fa-linkedin linkedin"></i></a></li>
-							<li><a href="https://www.instagram.com/almaidajody/" target="_blank"><i class="fa fa-instagram instagram"></i></a></li> -->
-						</div>
+						{{-- <div class="social-nav center-block visible-xs">
+							
+						</div> --}}
 						<!--toggle get grouped for better mobile display -->
 						<div class="navbar-header">
 						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -95,7 +106,7 @@
 								<li><a href="https://jodyalmaida.com" target="_blank">About Me</a></li>
 							</ul>
 							<br>
-							<img class="logo pull-right" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:20% !important; height: 20% !important;" />
+							<img class="logo pull-right share-hub" src="{{ asset('author-basic/logo.png')}}" alt="Logo" style="width:30% !important; height: 30% !important;" /><br>
 							<!-- <ul class="nav navbar-nav navbar-right hidden-xs">
 								<li><a href="https://github.com/medivh13" target="_blank"><i class="fa fa-github github"></i></a></li>
 								<li><a href="https://www.linkedin.com/in/jody-almaida-putra-667772ab/" target="_blank"><i class="fa fa-linkedin linkedin"></i></a></li>
@@ -109,7 +120,7 @@
 		<!--========================== Contant-Area================================-->
 		<div class="contant-area">
 			<div class="container">
-				<div class="row row-offcanvas row-offcanvas-left">
+				<div class="row row-offcanvas row-offcanvas-left carousel-place">
 					<div class="col-md-12 col-sm-8 col-xs-12">
 						<div id="myCarousel" class="owl-carousel owl-theme" data-ride="carousel">
 							<div class="item">
