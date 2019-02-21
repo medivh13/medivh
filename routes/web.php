@@ -14,6 +14,8 @@ use App\Models\Category;
 */
 // Route::resource('/', 'FrontEnd\BlogController@index');
 // Route::get('/post/{slug}', 'FrontEnd\BlogController@post');
+Route::get('/sitemap.xml', 'SiteMap\SiteMapController@index');
+
 Route::get('/', function (Request $request) {
 	$post= Post::when($request->search, function($query) use($request) {
 		$search = $request->search;
