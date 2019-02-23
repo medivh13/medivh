@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\SiteMap;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Signatures;
+use App\Http\Resources\SignatureResource;
 
-class SiteMapController extends Controller
+class SignatureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +16,10 @@ class SiteMapController extends Controller
      */
     public function index()
     {
-        $data['post'] = Post::orderBy('updated_at', 'DESC')->get();
-        
-        return response()->view('sitemap.index', $data)
-        ->header('Content-Type', 'text/xml');
+        $signatures = Signature::latest()
+            ->ignoreFlagged()
+            ->paginate(20);
+        return SignatureResource::collection($signatures);
     }
 
     /**
@@ -28,7 +29,7 @@ class SiteMapController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,7 +40,15 @@ class SiteMapController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $signature = $this->validate($request, [
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|email',
+            'body' => 'required|min:3'
+        ]);
+
+        $signature = Signature::create($signature);
+
+        return new SignatureResource($signature);
     }
 
     /**
@@ -48,9 +57,9 @@ class SiteMapController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($signature)
     {
-        //
+        return new SignatureResource($signature);
     }
 
     /**
