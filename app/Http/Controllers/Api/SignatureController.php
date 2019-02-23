@@ -16,7 +16,7 @@ class SignatureController extends Controller
      */
     public function index()
     {
-        $signatures = Signature::latest()
+        $signatures = Signatures::latest()
             ->ignoreFlagged()
             ->paginate(20);
         return SignatureResource::collection($signatures);
@@ -46,7 +46,7 @@ class SignatureController extends Controller
             'body' => 'required|min:3'
         ]);
 
-        $signature = Signature::create($signature);
+        $signature = Signatures::create($signature);
 
         return new SignatureResource($signature);
     }
