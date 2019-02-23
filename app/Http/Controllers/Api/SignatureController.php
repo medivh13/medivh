@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Signatures;
+use App\Models\Signatures;
 use App\Http\Resources\SignatureResource;
 
 class SignatureController extends Controller
