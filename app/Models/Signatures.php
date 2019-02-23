@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Signatures extends Model
 {
+    protected $table = 'tb_signature';
     protected $fillable = ['name', 'email', 'body', 'flagged_at'];
 
     public function scopeIgnoreFlagged($query)
