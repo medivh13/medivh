@@ -17,8 +17,8 @@ class SignatureController extends Controller
     public function index()
     {
         $signatures = Signatures::latest()
-            ->ignoreFlagged()
-            ->paginate(20);
+            ->ignoreFlagged();
+            // ->paginate(20);
         return SignatureResource::collection($signatures);
     }
 
