@@ -23,6 +23,7 @@ class DonasiController extends Controller
             $sum_value = Donasi::where('penerima_id',$val->penerima_id)->sum('value');
             $data[$key]['id'] = $val->id;
             $data[$key]['name'] = $val->penerima->name;
+            $data[$key]['alamat'] = $val->penerima->avatar;
             $data[$key]['value'] = $sum_value; 
         }
         return collect($data);
