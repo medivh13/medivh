@@ -29,7 +29,8 @@ class DonasiController extends Controller
             $data[$key]['title'] = $val->penerima->title;
             $data[$key]['keterangan'] = $val->penerima->keterangan;
             $data[$key]['needed'] = $val->penerima->needed;
-            $data[$key]['last_day'] = Carbon::parse($val->penerima->tgl_akhir)->diffForHumans(Carbon::parse($val->penerima->created_at));
+            $waktu = Carbon::parse($val->penerima->tgl_akhir)->diffForHumans(Carbon::parse($val->penerima->created_at));
+            $data[$key]['last_day'] = str_replace('setelah','lagi', $waktu);
             $data[$key]['progress'] = ((doubleval($sum_value) / doubleval($val->penerima->needed)) * 100);
             
         }
