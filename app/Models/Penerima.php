@@ -9,7 +9,7 @@ class Penerima extends Model
     protected $table = 'tb_penerima';
 
 	protected $fillable = [
-        'created_at', 'update_at', 'nama', 'alamat'
+        'created_at', 'update_at', 'nama', 'alamat','keterangan', 'title', 'needed', 'tgl_akhir'
     ];
 
     public function getDonasi(){

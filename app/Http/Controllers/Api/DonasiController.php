@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Donasi;
 use App\Http\Resources\DonasiResource;
 use DB;
+use Carbon\Carbon;
 class DonasiController extends Controller
 {
     /**
@@ -25,6 +26,12 @@ class DonasiController extends Controller
             $data[$key]['name'] = $val->penerima->name;
             $data[$key]['alamat'] = $val->penerima->avatar;
             $data[$key]['value'] = $sum_value; 
+            $data[$key]['title'] = $val->penerima->title;
+            $data[$key]['keterangan'] = $val->penerima->keterangan;
+            $data[$key]['needed'] = $val->penerima->needed;
+            $data[$key]['last_day'] = Carbon::parse($val->penerima->tgl_akhir)->diffForHumans(Carbon::parse($val->penerima->created_at));
+            $data[$key]['progress'] = ((doubleval($sum_value) / doubleval($val->penerima->needed)) * 100);
+            
         }
         return collect($data);
     }
