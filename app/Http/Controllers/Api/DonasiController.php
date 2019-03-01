@@ -23,10 +23,10 @@ class DonasiController extends Controller
             $sum_value = 0;
             $sum_value = Donasi::where('penerima_id',$val->penerima_id)->sum('value');
             $data[$key]['id'] = $val->id;
-            $data[$key]['name'] = $val->penerima->name;
+            $data[$key]['name'] = ucwords($val->penerima->name);
             $data[$key]['alamat'] = $val->penerima->avatar;
             $data[$key]['value'] = $sum_value; 
-            $data[$key]['title'] = $val->penerima->title;
+            $data[$key]['title'] = ucwords($val->penerima->title);
             $data[$key]['keterangan'] = $val->penerima->keterangan;
             $data[$key]['needed'] = $val->penerima->needed;
             $waktu = Carbon::parse($val->penerima->tgl_akhir)->diffForHumans(Carbon::parse($val->penerima->created_at));
