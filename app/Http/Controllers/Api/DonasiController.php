@@ -66,7 +66,11 @@ class DonasiController extends Controller
      */
     public function show($id)
     {
-        //
+        $donasi = Donasi::find($id);
+        $data['title'] = ucwords($donasi->penerima->title);
+        $data['avatar'] = $donasi->penerima->avatar;
+
+        return collect($data);
     }
 
     /**
