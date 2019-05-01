@@ -16,7 +16,8 @@
     <meta name="google-site-verification" content="7gpPFkKxYhxoTmV9mEfRjQsNw4bp1I-y-uy976_fwdA" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="@yield('meta_description')">
-    <meta name="keywords" content="@yield('meta_keywords')">
+	<meta name="keywords" content="@yield('meta_keywords')">
+	@yield('facebook-meta')
     <title>Tutorial Bahasa Indonesia - @yield('title')</title>
 
     <!-- Bootstrap -->

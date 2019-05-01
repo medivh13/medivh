@@ -1,4 +1,11 @@
 @extends('layouts.author_basic')
+@section('facebook-meta')
+<meta property="og:url" content="{{ url("/post/{$post->slug}") }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{$post->seo_title}}" />
+<meta property="og:description" content="{{$post->meta_description}}" />
+<meta property="og:image" content="{{ asset('/storage/'.$post->image)}}" />
+@endsection
 @section('title')
 {{$post->seo_title}}
 @endsection
