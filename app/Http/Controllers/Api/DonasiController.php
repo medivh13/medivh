@@ -25,14 +25,14 @@ class DonasiController extends Controller
             $data[$key]['id'] = $val->id;
             $data[$key]['name'] = ucwords($val->penerima->name);
             $data[$key]['alamat'] = $val->penerima->avatar;
-            $data[$key]['value'] = formatPrice($sum_value); 
+            $data[$key]['value'] = formatPrice($sum_value);
             $data[$key]['title'] = ucwords($val->penerima->title);
             $data[$key]['keterangan'] = $val->penerima->keterangan;
             $data[$key]['needed'] = formatPrice($val->penerima->needed);
             $waktu = Carbon::parse($val->penerima->tgl_akhir)->diffForHumans(Carbon::parse($val->penerima->created_at));
             $data[$key]['last_day'] = str_replace('setelah','lagi', $waktu);
             $data[$key]['progress'] = ((doubleval($sum_value) / doubleval($val->penerima->needed)) * 100);
-            
+
         }
         return collect($data);
     }
@@ -55,7 +55,7 @@ class DonasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return collect($request->all());
     }
 
     /**
