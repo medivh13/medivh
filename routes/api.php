@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('signatures', 'Api\SignatureController');
 Route::resource('donasi', 'Api\DonasiController');
+
+Route::resource('laundrys', 'Api\LaundryController');
